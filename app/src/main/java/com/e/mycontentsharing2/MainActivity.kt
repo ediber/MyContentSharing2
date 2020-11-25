@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
                 type = "text/plain"
             }
 
-            startActivity(sendIntent)
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)
         })
     }
 }
